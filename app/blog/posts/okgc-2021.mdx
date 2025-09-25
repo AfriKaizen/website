@@ -1,0 +1,67 @@
+---
+title: 'OK Grand Challenge 2021 Digital Campaign Mobile Website'
+publishedAt: '2021-12-01'
+summary: 'The Job: Redesign the website to give it a refreshed modern look while remaining mobile friendly and usable. Allow customers to interact with existing OK systems for coupon checking and verification as well as registration for the final draw at the end of the competition.'
+---
+
+## Background
+<div class="bg-white">
+<img src="/okgc-2021/Ok-Zim-Logo.png" alt="Diagram" width="auto"/><br/>
+</div>
+OK Zimbabwe is Zimbabwe's biggest supermarket chain and each year they run the "OK Grand Challenge Jackpot Promotion" where shoppers who have been shopping at their retial outlets have the opportunity to win various prizes, from cars, groceries and cash prizes.
+OK Zimbabwe through their partnered Digital Agency Barkers Ogilvy Zimbabwe reached out to us with the following task:
+Redesign the website to give it a refreshed modern look while remaining mobile friendly and usable. Allow customers to interact with existing OK systems for coupon checking and verification as well as registration for the final draw at the end of the competition.
+
+## Tech Used
+
+We got straight to work and settled on the following for our tech:
+- 1. Wordpress
+
+We deployed wordpress in a headless mode. This is because our client needed to handle and manage a lot of content including
+images, video, text, posters etc. Because we don't want to re-invent the wheel using Wordpress for this makes life so much easier
+because Wordpress is great at managing content. We stored all the content for the campaign in our Wordpress deployment and just pulled
+out different content we needed via GraphQL API calls. Implementing caching in Wordpress meant that our content was returned very quickly
+and the client could add, updated and remove content whenever they needed to without having to get very technical.
+
+- 2. Angular & Tailwind CSS
+
+We used Angular for our Frontend App and used Tailwind CSS to style the different components of the site. Working with Angular was great for
+creating different components for the website and we could make GraphQL calls from Angular to load in content for the website on demand. Tailwind CSS
+made styling the website very easy and quick. We also used tree-shaking from Tailwind CSS to reduce the ultimate size of the bundle produced so that we could
+create a beautiful website that loads very fast.
+
+- 3. .Net Core Web API
+
+We used .Net to integrate with the OK Systems Backend to push coupons and pull any information related to customers that we needed to display.
+All the account management aspects of the system where built using .Net Core and we used this technology to do things such as check coupons, register customers,
+retrieve customer coupons and send draw entries to the OK System. We where able to handle upwards of 1000 requests per second during the peak of the competition and
+did not encounter any downtime. We used JWT tokens for security when communicating between the OK System and our .Net Core API and the Angular frontend was able to 
+communicate with the OK System via the .Net Core APi which acted as a Proxy between the public site and the OK Systems.
+
+## Results
+<img src="/okgc-2021/1.png" alt="Diagram" width="auto"/>
+<img src="/okgc-2021/2.png" alt="Diagram" width="auto"/>
+Primary colors for the brand are RED. So we tried using it sparingly across the homepage to make it readable.
+<br/>
+<img src="/okgc-2021/3.png" alt="Diagram" width="auto"/>
+Store locator section using Google Maps API to show different stores across Zimbabwe.<br/>
+<img src="/okgc-2021/4.png" alt="Diagram" width="auto"/>
+Primary way to enter the draw was to fill out this form. After filling it out the website would submit the info via the .Net API to the OK Systems & confirm registration.<br/>
+<img src="/okgc-2021/5.png" alt="Diagram" width="auto"/>
+Suppliers section of the website showcased different brands that were part of the competition. We pulled this information from our Headless Wordpress deployment using a GraphQL API.<br/>
+<img src="/okgc-2021/6.png" alt="Diagram" width="auto"/>
+Weekly winners were published by the client as they could login and update this list anytime via Wordpress without any technical knowledge.<br/>
+<img src="/okgc-2021/8.png" alt="Diagram" width="auto"/>
+Tweets were pulled in from the OK Zimbabwe Twitter account.<br/>
+<img src="/okgc-2021/9.png" alt="Diagram" width="auto"/>
+Facebook posts were pulled in from the OK Zimbabwe Facebook page.<br/>
+<img src="/okgc-2021/10.png" alt="Diagram" width="auto"/>
+Instagram posts were pulled in from the OK Zimbabwe Instagram Account.<br/>
+<img src="/okgc-2021/11.png" alt="Diagram" width="auto"/>
+This is an example of blog posts that where created by the client in Wordpress and we pulled them from there, styled them and displayed them on the homepage.<br/>
+
+Below are some responsive images from the website showing how it looked on mobile screens.<br/>
+<img src="/okgc-2021/7.png" alt="Diagram" width="auto"/><br/>
+<img src="/okgc-2021/12.png" alt="Diagram" width="auto"/><br/>
+<img src="/okgc-2021/13.png" alt="Diagram" width="auto"/><br/>
+<img src="/okgc-2021/14.png" alt="Diagram" width="auto"/><br/>
