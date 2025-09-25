@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   title: {
     default: 'AfriKaizen Digital',
-    template: '%s | Website',
+    template: '%s | AfriKaizen Digital',
   },
   description: 'AfriKaizen Digital',
   openGraph: {
