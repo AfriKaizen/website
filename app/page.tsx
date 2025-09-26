@@ -4,7 +4,7 @@ export default function Page() {
   return (
     <section>
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        AfriKaizen Digital
+        <div className='flex flex-row'><span>AfriKaizen</span><img src='logo.png' className='w-12 -mt-4'/><span>Digital</span></div>
       </h1>
       <p className="mb-4">
           <span className='text-xl'>Hi 👋🏾<br/>
