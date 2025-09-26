@@ -34,9 +34,9 @@ export default function Footer() {
         <li className="pt-1"><a className="pointer-mouse" rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/company/afrikaizen-incorporated"><img src="linkedin.png" className='w-16'/></a></li>
 
       </ul>
-      <p className="mt-8 text-neutral-600 dark:text-neutral-30 text-sm">
-        © {new Date().getFullYear()} AfriKaizen Inc. (PBC)
-      </p>
+      <a rel="noopener noreferrer" target="_blank" href="/afrikaizen_itf263.pdf" className="mt-8 text-neutral-600 dark:text-neutral-30 text-sm">
+        © {new Date().getFullYear()} AfriKaizen Inc. (PBC). See our ZIMRA Tax Compliance Status ✅
+      </a>
     </footer>
   )
 }
