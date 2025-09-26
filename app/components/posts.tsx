@@ -25,7 +25,7 @@ export function BlogPosts() {
               <p className="text-neutral-600 dark:text-neutral-400 w-[100px] tabular-nums text-xs">
                 {formatDate(post.metadata.publishedAt, false)}
               </p>
-              <div className='flex flex-col'>
+              <div className='flex flex-col w-full'>
               <p className="text-neutral-900 dark:text-neutral-100 tracking-tight underline">
                 {post.metadata.title}
               </p>
