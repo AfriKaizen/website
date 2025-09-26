@@ -22,7 +22,7 @@ export default function Page() {
           Drop us an email: <a className='underline' href="mailto:hi@afrikaizen.co.zw">hi@afrikaizen.co.zw</a> and we can schedule a call.
 
           <br/><br/><br/>
-          If you would like to see what we do, here is some of the work we've done 👇🏿
+          If you would like to see what we do, here is some of the work we've done 👇🏾
       </p>
       <div className="my-8">
         <BlogPosts />

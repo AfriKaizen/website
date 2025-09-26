@@ -25,9 +25,16 @@ export function BlogPosts() {
               <p className="text-neutral-600 dark:text-neutral-400 w-[100px] tabular-nums text-xs">
                 {formatDate(post.metadata.publishedAt, false)}
               </p>
+              <div className='flex flex-col'>
               <p className="text-neutral-900 dark:text-neutral-100 tracking-tight underline">
                 {post.metadata.title}
               </p>
+              <p className='space-x-2'>
+                {post.metadata.tags?.split(',').map(i=>{
+                  return <span className="text-xs px-1 text-neutral-900 tracking-tight bg-white rounded-full">{i}</span>
+                })}
+              </p>
+              </div>
             </div>
           </Link>
         ))}
