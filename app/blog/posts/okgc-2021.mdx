@@ -5,7 +5,7 @@ summary: 'The Job: Build the website to be mobile ready, with a fresh, modern lo
 tags: OK Zimbabwe,Barkers Ogilvy Zimbabwe,Website,Mobile, Angular, .Net API, Headless, Wordpress, Tailwind CSS
 ---
 
-## Background
+## What Was The Problem? 🤔
 <div class="bg-white">
 <img src="/okgc-2021/Ok-Zim-Logo.png" alt="Diagram" width="auto"/><br/>
 </div>
@@ -14,10 +14,10 @@ biggest supermarket chain and each year they run the <a class="hover:text-white 
 OK Zimbabwe through their partnered Digital Agency <a class="hover:text-red-600 dark:hover:text-red-500 text-red-400 decoration-red-400 pointer-mouse" rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/ogilvyzimbabwe/">Barkers Ogilvy Zimbabwe</a> reached out to us with the following task:
 Build the website to be mobile ready, with a fresh, modern look while remaining mobile friendly and usable. Allow customers to interact with existing OK systems for coupon checking and verification as well as registration for the final draw at the end of the competition.
 
-## Tech Used
+## What Did We Build? ⚒️
 
 We got straight to work and settled on the following for our tech:
-- 1. Wordpress
+- 1. Wordpress - Headless Content Management Backend
 
 We deployed wordpress in a headless mode. This is because our client needed to handle and manage a lot of content including
 images, video, text, posters etc. Because we don't want to re-invent the wheel using Wordpress for this makes life so much easier
@@ -25,14 +25,14 @@ because Wordpress is great at managing content. We stored all the content for th
 out different content we needed via GraphQL API calls. Implementing caching in Wordpress meant that our content was returned very quickly
 and the client could add, updated and remove content whenever they needed to without having to get very technical.
 
-- 2. Angular & Tailwind CSS
+- 2. Angular & Tailwind CSS - Frontend Mobile Web App
 
 We used Angular for our Frontend App and used Tailwind CSS to style the different components of the site. Working with Angular was great for
 creating different components for the website and we could make GraphQL calls from Angular to load in content for the website on demand. Tailwind CSS
 made styling the website very easy and quick. We also used tree-shaking from Tailwind CSS to reduce the ultimate size of the bundle produced so that we could
 create a beautiful website that loads very fast.
 
-- 3. .Net Core Web API
+- 3. .Net Core Web API - Secure Data Processing API
 
 We used .Net to integrate with the OK Systems Backend to push coupons and pull any information related to customers that we needed to display.
 All the account management aspects of the system where built using .Net Core and we used this technology to do things such as check coupons, register customers,
@@ -40,7 +40,7 @@ retrieve customer coupons and send draw entries to the OK System. We where able 
 did not encounter any downtime. We used JWT tokens for security when communicating between the OK System and our .Net Core API and the Angular frontend was able to 
 communicate with the OK System via the .Net Core APi which acted as a Proxy between the public site and the OK Systems.
 
-## Results
+## The Solution 🎉
 <img src="/okgc-2021/1.png" alt="Diagram" width="auto"/>
 <img src="/okgc-2021/2.png" alt="Diagram" width="auto"/>
 Primary colors for the brand are RED. So we tried using it sparingly across the homepage to make it readable.
