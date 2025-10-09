@@ -1,0 +1,79 @@
+---
+title: 'Castle Lite Unlocks Post Malone'
+publishedAt: '2020-01-01'
+summary: 'The Job: Build a Mobile App & Desktop App that allows Castle Lite to get people to enter a draw and run the draw to select winners'
+tags: Delta Beverages Zimbabwe, Castle Lite, Castle Lite Unlocks, Barkers Ogilvy Zimbabwe, Mobile, Desktop, Android, iOS, Electron
+---
+
+## What Was The Problem? 🤔
+<img src="/castle-lite-unlocks/logo.webp" alt="Castle Lite Logo" width="auto"/>
+<a class="hover:text-blue-400 text-blue-300 decoration-blue-400 pointer-mouse" rel="noopener noreferrer" target="_blank" href="https://www.castlelite.co.za/about-us">Castle Lite Unlocks</a>
+Castle Lite Unlocks is an event that immerses itself in Hip-Hop culture completely through music, fashion, dance, lifestyle and collaborations  with South African artists and international acts.
+<img src="/castle-lite-unlocks/poster.jpg" alt="Castle Lite" width="auto"/><br/>
+<a class="hover:text-yellow-400 text-yellow-300 decoration-yellow-400 pointer-mouse" rel="noopener noreferrer" target="_blank" href="https://delta.co.zw/">Delta Baverages Zimbabwe</a> which produces & distributes Castle Lite in 
+<a class="hover:text-green-600 dark:hover:text-yellow-500 text-green-400 decoration-yellow-400 pointer-mouse" rel="noopener noreferrer" target="_blank" href="https://en.wikipedia.org/wiki/Zimbabwe">🇿🇼 Zimbabwe</a>
+where running a promotion where patrons in select bars all around Zimbabwe purchase a set amount of 
+alcohol on the day of the draw, they are entered into the draw and at midnight a draw is ran and a winner is announced. The winners then get tickets to travel to South Africa for the
+<a class="hover:text-blue-400 text-blue-300 decoration-blue-400 pointer-mouse" rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=OXjkTAHobc0 ">Castle Lite Unlocks: Post Malone</a>
+event in South Africa. Delta Beverages through their partnered Digital Agency <a class="hover:text-red-600 dark:hover:text-red-500 text-red-400 decoration-red-400 pointer-mouse" rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/ogilvyzimbabwe/">Barkers Ogilvy Zimbabwe</a> 
+reached out to us with the following task: Build a solution that allows select bars across the the country to have patrons enter into a draw that is run live in the bar and allow them to announce a winner after the draw.
+
+## What Did We Build? ⚒️
+
+We got straight to work and settled on the following for our tech:
+- 💻 <a href="https://www.electronjs.org/" rel="noopener noreferrer" target="_blank">Electon.JS - Desktop Draw App</a>
+
+For this project we wanted to experiment and build something different. Because the draws needed to be run at different bars on different days and at different times we settled on building a desktop app
+which could be deployed on a single machine in the bar. As the night goes on different waiters collect coupons from patrons as they buy alcohol. They scan the coupons with a mobile app we built and collect the
+petrons name, surname and ID number, tallying up how much alcohol each patron has bought in the backend. The Desktop App then constantly synchronises data from the backend database via an API and caches this 
+data on the machine in the bar. At midnight or whatever time is decided the draw is concluded and the system is triggered to roll and randomly select a winner which the desktop app announces on screen.
+
+- 📲 <a href="https://developer.android.com/studio/" rel="noopener noreferrer" target="_blank">Android – Mobile App</a><br/>
+
+We built an Android Mobile App which was installed on different waiters mobile devices in different bars. As the night of the draw progressed the different waiters would use the app to go around the bar and collect
+coupons from different patrons, collect their details and scan in their coupons. This data was collected by the device and synchronised via API call to a backend API which saved all this data in a database. For audit
+purposes we did not allow the same waiter or different waiters to collect the same coupon multiple times so we tied in a record of a scanned coupon together with the waiter and the patron, date as well as time so that
+all entries can be traced.
+
+- 🌐 <a href="https://dotnet.microsoft.com/en-us/apps/aspnet/apis" rel="noopener noreferrer" target="_blank">.Net Web API</a><br/>
+
+We built and exposed a Web API with the purpose of receiving requests from different mobile devices for coupons being entered into the draw. The API then connects to a database and stores all the data.
+The Desktop App also connects to the same API and pulls data from the database via the API at different intervals to store coupons in the Desktop App.
+
+- 🐘 <a href="https://www.postgresql.org/" rel="noopener noreferrer" target="_blank">PostgreSQL Database</a><br/>
+
+We deployed a PostgresSQL database which was our central store for the data for the project. We love working with PostgresSQL because it is light-weight, fast and open source.
+
+When choosing technology we always do our research and find the most supported technologies for the long-term as a systerm grows so that we do not introduce vulnerabilities
+into our clients systems and technology. We always use well supported technology and love working with Open Source Technology.
+
+
+## The Solution 🎉
+
+<p class="text-xs">Below are screen-grabs of of the Mobile App we developed for this project.</p>
+
+<p style={{ display: "flex", gap: "10px" }}>
+<img src="/castle-lite-unlocks/1.png" alt="Diagram" width="25%"/>
+<img src="/castle-lite-unlocks/2.png" alt="Diagram" width="25%"/>
+<img src="/castle-lite-unlocks/3.png" alt="Diagram" width="25%"/>
+</p>
+
+<p style={{ display: "flex", gap: "10px" }}>
+<img src="/castle-lite-unlocks/4.png" alt="Diagram" width="25%"/>
+<img src="/castle-lite-unlocks/5.png" alt="Diagram" width="25%"/>
+<img src="/castle-lite-unlocks/6.png" alt="Diagram" width="25%"/>
+</p>
+
+<p class="text-xs">Below are screen-grabs of of the Desktop App we developed for this project.</p>
+
+<p style={{ display: "flex", gap: "10px" }}>
+<img src="/castle-lite-unlocks/7.png" alt="Diagram" width="50%"/>
+<img src="/castle-lite-unlocks/8.png" alt="Diagram" width="50%"/>
+</p>
+
+<p style={{ display: "flex", gap: "10px" }}>
+<img src="/castle-lite-unlocks/9.png" alt="Diagram" width="50%"/>
+<img src="/castle-lite-unlocks/10.png" alt="Diagram" width="50%"/>
+</p>
+
+<img src="/castle-lite-unlocks/11.png" alt="Diagram" width="100%"/>
